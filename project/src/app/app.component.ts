@@ -1,11 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgbCarousel, NgbCarouselModule, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgbCarouselModule, FormsModule],
+  imports: [NgbCarouselModule, FormsModule,NgbRatingModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -42,4 +43,7 @@ export class AppComponent {
 			this.togglePaused();
 		}
 	}
+	selected = 0;
+	hovered = 0;
+	readonly = false;
 }
